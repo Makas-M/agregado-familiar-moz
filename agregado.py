@@ -1,5 +1,7 @@
 import pandas as pd
 
+# coluna desejada
+provincia = 'Maputo Cidade'
 # caminhos
 caminho_arquivo = 'agregado.xlsx'
 nome_da_planilha = 'Plan1'
@@ -10,8 +12,9 @@ coluna_provincia = 'Provincia'
 # Carregar o arquivo
 df = pd.read_excel(caminho_arquivo, sheet_name=nome_da_planilha)
 
-# Extrair dados da coluna
-dados_coluna = df[coluna_agregado]
+# filtrar
+dados_coluna = df[df[coluna_provincia] == provincia]
 
-# Imprimir os dados da coluna
+
+# Imprimir os dados
 print(dados_coluna)
