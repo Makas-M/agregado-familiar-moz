@@ -1,5 +1,4 @@
 import pandas as pd
-import osmnx as ox
 
 # distrito desejado
 distrito = 'Chibuto'
